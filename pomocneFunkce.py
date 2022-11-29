@@ -73,9 +73,9 @@ def recognizeNumber(img):
         seg = img[yA:yB, xA:xB]
         total = cv.countNonZero(seg)
         area = (xB - xA) * (yB - yA)
-        # Pokud je množství nenulových pixelů v segmentu vetší než 0.46 všech pixelů segmentu,
+        # Pokud je množství nenulových pixelů v segmentu vetší než 0.45 všech pixelů segmentu,
         # tak označím jako aktivní
-        if total / float(area) > 0.46:
+        if total / float(area) > 0.45:
             on[i] = 1
         # Vyhledání čísla ze slovníku DIGITS_LOOKUP
     digit = DIGITS_LOOKUP[tuple(on)]
