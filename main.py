@@ -40,9 +40,3 @@ if __name__ == '__main__':
         C = cisla[2]
         digit3 = pf.recognizeNumber(C)
         print(digit1, digit2, digit3)
-
-
-
-    #contours, hierarchy = cv.findContours(img, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
-    #img2 = np.zeros([img.shape[0], img.shape[1]])
-    #cv.drawContours(img2, contours, -1, 
