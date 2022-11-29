@@ -1,6 +1,7 @@
 import cv2 as cv
 import pomocneFunkce as pf
 import glob
+import os
 from scipy.ndimage import gaussian_filter
 
 # 1) Předpokládám digitálně vytištěná čísla uprostřed papíru, vyrovnaná,
@@ -22,7 +23,7 @@ from scipy.ndimage import gaussian_filter
 
 if __name__ == '__main__':
 
-    for fileloc in glob.iglob("/Users/petrkovac/PycharmProjects/uloha1/framesEasy/*.png"):
+    for fileloc in glob.iglob(os.getcwd() + "/framesEasy/*.png"):
         img = cv.imread(fileloc)
         grayimg = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         # Eliminace šumu pomocí morfologie, konvoluce s Gaussovo filtrem
