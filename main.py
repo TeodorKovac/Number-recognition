@@ -16,7 +16,7 @@ from scipy.ndimage import gaussian_filter
 # 6) Párování s čísly ze slovníku
 
 # ------------------------------------
-# Pokud by čísla byla psaná různě,různě, nejistý font
+# Pokud by čísla byla psaná různě, ručně, nejistý font
 #       - Fourierovy deskriptory
 #       - Neuronové sítě v případě trénovací množiny
 
