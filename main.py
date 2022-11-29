@@ -4,11 +4,11 @@ import glob
 import os
 from scipy.ndimage import gaussian_filter
 
-# 1) Předpokládám digitálně vytištěná čísla uprostřed papíru, vyrovnaná,
-# snadno rozpoznatelná od pozadí. (framesEasy jsou fotky teploty termostatu)
+# 1) Předpokládám digitálně vytištěná čísla skládající se ze 7 segmentů, vyrovnaná,
+# snadno rozpoznatelná od pozadí. (použil jsem fotky digitálního teploměru krbu - folder framesEasy)
 #       - pokud by byla čísla orotovaná, tak např. pomocí horizontální projekce zjistíme úhel
 #       nebo openCV minAreaRect() zjistí uhel rotace nejmenšího opsaného čtyřuhelníku
-#       nebo metoda Fourierovy deskriptory.
+#       nebo metoda Fourierovy deskriptory...
 # 2) Převedení obrázku do grayscale, drobná eliminace šumu pomoci konvoluce Gaussovo filtrem.
 # 3) Poté převedení do black&white prahováním.
 #       - dalo by se použít metoda pro hledání prahu (Otsu?)...
