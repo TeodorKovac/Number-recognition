@@ -2,6 +2,7 @@ import cv2 as cv
 import pomocneFunkce as pf
 import glob
 import os
+import fourierDescriptors as fd
 from scipy.ndimage import gaussian_filter
 
 # 1) Předpokládám digitálně vytištěná čísla skládající se ze 7 segmentů, vyrovnaná,
@@ -22,6 +23,14 @@ from scipy.ndimage import gaussian_filter
 #       - Neuronové sítě v případě trénovací množiny
 
 if __name__ == '__main__':
+
+    img = cv.imread("framesEasy/001.png")
+    grayimg = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+    (thresh, img) = cv.threshold(grayimg, 240, 255, cv.THRESH_BINARY)
+    (cisla, kolikCisel) = pf.segmentace(img)
+    A = cisla[0]
+    deskriptory1 = fd.findDescriptor(A)
+    print(deskriptory1)
 
     for fileloc in glob.iglob(os.getcwd() + "/framesEasy/*.png"):
         img = cv.imread(fileloc)
