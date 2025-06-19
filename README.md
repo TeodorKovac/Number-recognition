@@ -1,7 +1,5 @@
 # Number-recognition
 
-Úloha v rámci přijímacího řízení do DataSentics.
-
 Zadání bylo napsat program pro automatické rozpoznávání čísel.
 
 Problém jsem zjednodušil předpokladem digitálních číslic a jako testovací data jsem použil sérii fotek digitálního teploměru krbu. Úlohu jsem řešil dvěma způsoby.
